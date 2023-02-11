@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+      formaction="mailto:katlosyeva@gmail.com"
+      formmethod="POST"
+      formenctype="text/plain"
+      autocomplete="on"
+    >
+      <label for="name">First name:</label><br />
+      <input type="text" id="name" name="name" required /><br />
+
+      <label for="lastname">Last name:</label><br />
+      <input type="text" id="lastname" name="lastname" required /><br />
+
+      <label for="age">Age:</label><br />
+      <input
+        type="number"
+        id="age"
+        name="age"
+        min="14"
+        max="100"
+        step="1"
+        required
+      /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br />
+
+      <label for="city">City:</label><br />
+      <input type="text" name="city" list="cities" required />
+      <datalist id="cities">
+        <option value="Lviv" />
+        <option value="Kyiv" />
+        <option value="Dnipro" />
+      </datalist>
+      <br />
+      <label for="aboutyou">Write something about yourself:</label><br />
+      <textarea
+        id="aboutyou"
+        name="aboutyou"
+        minlength="5"
+        maxlength="50"
+        required
+      ></textarea
+      ><br />
+      <label for="yourprogress">Your form is complete for:</label><br />
+      <progress
+        name="yourprogress"
+        id="yourprogress"
+        value="20"
+        max="100"
+      ></progress>
+      <span>%</span><br />
+      <button type="submit">Send data about you</button>
+    </form>
+    <p>This is a button:</p>
+    <div
+      style="border: 1px solid black; display: inline-block"
+      role="button"
+      aria-pressed="false"
+      tabindex="0"
+    >
+      Custom button
+    </div>
+    <p>This is a table:</p>
+    <div
+      tabindex="0"
+      role="table"
+      aria-label="Example of Table"
+      aria-rowcount="4"
+      style="border: 1px solid black; display: inline-block"
+    >
+      <div role="rowgroup">
+        <div role="row">
+          <span role="columnheader" tabindex="0" aria-sort="none">Name</span>
+          <span role="columnheader" tabindex="0" aria-sort="none">Pet</span>
+        </div>
+      </div>
+
+      <div role="rowgroup">
+        <div role="row" aria-rowindex="1">
+          <span tabindex="0" role="cell">Ann</span>
+          <span tabindex="0" role="cell">Dog</span>
+        </div>
+        <div role="row" aria-rowindex="2">
+          <span tabindex="0" role="cell">Vasya</span>
+          <span tabindex="0" role="cell">Cat</span>
+        </div>
+        <div role="row" aria-rowindex="3">
+          <span tabindex="0" role="cell">Petro</span>
+          <span tabindex="0" role="cell">snake</span>
+        </div>
+        <div role="row" aria-rowindex="4">
+          <span tabindex="0" role="cell">Igor</span>
+          <span tabindex="0" role="cell">Hamster</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
